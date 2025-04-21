@@ -114,5 +114,5 @@ const app = htttp.createServer((req, res) => {
 const hostName = '127.0.0.1'
 
 app.listen(3000,hostName, () => {
-    console.log('Example app listening on port 3000!')
+    console.log('Server app listening on port 3000!')
 })
