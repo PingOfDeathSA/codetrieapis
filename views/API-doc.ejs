@@ -1,0 +1,45 @@
+<h3> Music API Documentation</h3>
+
+<p>This API allows you to upload, list, and delete music with custom cover images.</p>
+
+<table border="1" cellpadding="5" cellspacing="0">
+  <thead>
+    <tr>
+      <th>Endpoint</th>
+      <th>Method</th>
+      <th>Description</th>
+      <th>Parameters</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>/music-upload</code></td>
+      <td>POST</td>
+      <td>Upload a new music file with cover and metadata</td>
+      <td>
+        <ul>
+          <li><strong>song_name</strong>: Name of the song</li>
+          <li><strong>artist</strong>: Name of the artist</li>
+          <li><strong>song_cover</strong>: Cover image filename from <code>/images</code> folder</li>
+          <li><strong>musicFile</strong>: MP3 file (from local storage)</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td><code>/</code></td>
+      <td>GET</td>
+      <td>Retrieve the list of uploaded songs</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td><code>/delete-music</code></td>
+      <td>POST</td>
+      <td>Delete a song and its associated file</td>
+      <td>
+        <ul>
+          <li><strong>index</strong>: Index of the song to delete</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Music Player</h1>
+
+ 
+
+    <div class="grid-container">
+        <%- include('upload-song') %>
+        <%- include('get-songs') %>   
+    </div>
+    <%- include('API-doc') %>
+    <script>
+        const songSelect = document.getElementById('songs');
+        const selectedSongCover = document.getElementById('selected-song-cover').querySelector('img');
+        songSelect.addEventListener('change', function() {
+            selectedSongCover.src = '/images/' + this.value;
+        });
+    </script>
+</body>
+</html>

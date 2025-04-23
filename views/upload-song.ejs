@@ -1,0 +1,23 @@
+
+
+<form action="/music-upload" method="POST" enctype="multipart/form-data">
+    <div id="selected-song-cover">
+        <img class="slected_image" src="/images/<%= song_cover_images[0] %>" alt="Selected song cover" >
+    </div>
+   <div class="song_name">
+    <input  type="text" name="song_name" placeholder="Song Name" required>
+    <input type="text" name="artist" placeholder="Artist Name" required>
+   </div> 
+    <div class="select-song">
+        <label class="slected_song" for="songs">Select Song Cover</label>
+        <select name="song_cover" id="songs">
+            <% for (let i = 0; i < song_cover_images.length; i++) { %>
+              <option value="<%= song_cover_images[i] %>"><%= [i+1] %></option>
+            <% } %>
+          </select>
+    </div>
+    <div class="song_name">
+        <input type="file" name="musicFile" accept=".mp3" required>
+        <button style="background-color: #81E7AF;" type="submit">Upload Music</button>
+    </div>
+  </form>
