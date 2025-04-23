@@ -9,7 +9,7 @@
     <input type="text" name="artist" placeholder="Artist Name" required>
    </div> 
     <div class="select-song">
-        <label class="slected_song" for="songs">Select Song Cover</label>
+        <label class="slected_song" for="songs">Select Music Cover</label>
         <select name="song_cover" id="songs">
             <% for (let i = 0; i < song_cover_images.length; i++) { %>
               <option value="<%= song_cover_images[i] %>"><%= [i+1] %></option>
