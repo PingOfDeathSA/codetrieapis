@@ -1,14 +1,59 @@
-<h3> Music API Documentation</h3>
+<style>  table.api-doc {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    margin-bottom: 2rem;
+  }
 
+  table.api-doc thead {
+    background-color: #80CBC4;
+    
+  }
+
+  table.api-doc th, table.api-doc td {
+    padding: 15px;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid #eee;
+  }
+
+  table.api-doc th {
+    font-weight: 600;
+    color: #333;
+  }
+
+  table.api-doc tbody tr:hover {
+    background-color: #80CBC4;
+    color: white;
+  }
+
+  table.api-doc code {
+ 
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 90%;
+  }
+
+  table.api-doc ul {
+    margin: 0;
+    padding-left: 18px;
+  }</style>
+
+<h3>🎧 Music API Documentation</h3>
 <p>This API allows you to upload, list, and delete music with custom cover images.</p>
 
-<table border="1" cellpadding="5" cellspacing="0">
-  <thead>
-    <tr>
-      <th>Endpoint</th>
-      <th>Method</th>
-      <th>Description</th>
-      <th>Parameters</th>
+<table class="api-doc">
+  <thead >
+    <tr >
+      <th style="color: white;">Endpoint</th>
+      <th style="color: white;">Method</th>
+      <th style="color: white;">Description</th>
+      <th style="color: white;">Parameters</th>
     </tr>
   </thead>
   <tbody>
@@ -20,8 +65,8 @@
         <ul>
           <li><strong>song_name</strong>: Name of the song</li>
           <li><strong>artist</strong>: Name of the artist</li>
-          <li><strong>song_cover</strong>: Cover image filename from <code>/images</code> folder</li>
-          <li><strong>musicFile</strong>: MP3 file (from local storage)</li>
+          <li><strong>song_cover</strong>: Cover image filename (from <code>/images</code>)</li>
+          <li><strong>musicFile</strong>: MP3 file</li>
         </ul>
       </td>
     </tr>

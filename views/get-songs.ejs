@@ -2,11 +2,11 @@
     <div class="player">
       <% music_data.forEach((music, index) => { %>
         <div class="music">
-          <div class="music-name">Song Name: <%= music.song_name %></div>
+          <div class="music-name"><%= music.song_name %></div>
           <div class="music-image">
             <img class="song_image" src="<%= music.image_url %>" alt="<%= music.song_name %>" height="100px">
           </div>
-          <div class="music-artist">Artist: <%= music.artist %></div>
+          <div class="music-artist"><%= music.artist %></div>
           <audio src="<%= music.song_url %>" controls></audio>
           <form action="/delete-music" method="POST" style="margin-top: 10px;">
             <input type="hidden" name="index" value="<%= index %>">
