@@ -16,6 +16,7 @@ exports.getMusic = function(app, path, fs) {
           
       
         console.log(music_data)
+        res.status(200);
         res.render('index', {
           music_data,
           song_cover_images,

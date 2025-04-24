@@ -45,7 +45,7 @@ exports.uploadMusic = function(app, path, fs) {
             musicData.push(newSongInfo);
 
             fs.writeFileSync(dbPath, JSON.stringify(musicData, null, 2));
-
+            res.status(200);
             res.redirect('/');
         });
     });

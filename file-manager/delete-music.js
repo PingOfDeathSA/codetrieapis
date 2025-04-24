@@ -28,7 +28,7 @@ exports.deleteMusic = function(app, path, fs) {
                 }
             }
         }
-
+        res.status(200);
         res.redirect('/');
     });
 };
